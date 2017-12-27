@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#fdfdfd"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edtNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtName"
+        android:layout_alignStart="@+id/edtName"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Numero"
+        android:inputType="number|phone" />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edtNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        app:backgroundTint="#4ccf53"
+        app:srcCompat="@mipmap/check"
+        tools:layout_editor_absoluteX="340dp"
+        tools:layout_editor_absoluteY="509dp" />
+
+    <ImageView
+        android:id="@+id/imageViewcontactupdate"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/edtName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@mipmap/contacto2" />
+</RelativeLayout>

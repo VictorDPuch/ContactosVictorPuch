@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bababa"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="5dp">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btncall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/faButton"
+        android:layout_alignLeft="@+id/faButton"
+        android:layout_alignStart="@+id/faButton"
+        android:layout_marginBottom="21dp"
+        app:backgroundTint="#4ccf53"
+        app:srcCompat="@mipmap/androidcall"
+        tools:layout_editor_absoluteX="340dp"
+        tools:layout_editor_absoluteY="509dp" />
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/faButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#de2525"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        app:srcCompat="@mipmap/addcontact1"
+        tools:layout_editor_absoluteX="340dp"
+        tools:layout_editor_absoluteY="509dp" />
+
+
+</RelativeLayout>
