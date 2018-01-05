@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
                             }
                             // show dialog update at here
-                            showDialogUpdate(MainActivity.this, arrID.get(position));
+                            showDialogUpdate(MainActivity.this, arrID.get(position),position);
 
 
 
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     ImageView imageViewFood;
-    private void showDialogUpdate(Activity activity, final int position){
+    private void showDialogUpdate(Activity activity, final int position, final int posit){
 
         final Dialog dialog = new Dialog(activity);
         dialog.setContentView(R.layout.update_contact_activity);
@@ -164,10 +164,16 @@ public class MainActivity extends AppCompatActivity {
         final EditText edtName = (EditText) dialog.findViewById(R.id.edtName);
         final EditText edtNumber = (EditText) dialog.findViewById(R.id.edtNumber);
         byte [] IMAGE;
-        cursor.moveToPosition(position-1);
+        int id;
+        int pos;
+        cursor.moveToFirst();
+        cursor.moveToPosition(posit);
+        id=cursor.getInt(0);
+        pos=cursor.getPosition();
         edtName.setText(cursor.getString(1));
         edtNumber.setText(cursor.getString(2));
         IMAGE=(cursor.getBlob(3));
+        Toast.makeText(getApplicationContext(), "Item :"+posit+" ID: "+id+" Pos: "+pos,Toast.LENGTH_SHORT).show();
         try{
         Bitmap bmp=BitmapFactory.decodeByteArray(IMAGE,0,IMAGE.length);
         if (bmp!=null)
